@@ -1,0 +1,28 @@
+﻿{
+  "programlar": [
+    {
+      "ad": "Google Chrome",
+      "url": "https://dl.google.com/chrome/install/standalonesetup64.exe",
+      "dosya": "ChromeSetup64.exe",
+      "aciklama": "Google Chrome 64-bit bagimsiz kurulum"
+    },
+    {
+      "ad": "Steam",
+      "url": "https://cdn.akamai.steamstatic.com/client/installer/SteamSetup.exe",
+      "dosya": "SteamSetup.exe",
+      "aciklama": "Valve Steam istemcisi"
+    },
+    {
+      "ad": "Spotify",
+      "url": "https://download.scdn.co/SpotifySetup.exe",
+      "dosya": "SpotifySetup.exe",
+      "aciklama": "Spotify masaustu (web installer)"
+    },
+    {
+      "ad": "Valorant",
+      "url": "https://valorant.secure.dyn.riotcdn.net/channels/public/x/installer/current/live.live.eu.exe",
+      "dosya": "Valorant-Setup.exe",
+      "aciklama": "Riot Games / Valorant kurulumu"
+    }
+  ]
+}

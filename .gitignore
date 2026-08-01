@@ -1,0 +1,12 @@
+﻿# Indirilen kurulum dosyalari
+Indirilenler/
+
+# Yarim indirmeler ve devam kayitlari
+*.indiriliyor
+*.indiriliyor.durum
+
+# Calisma zamani loglari
+indirme-log.txt
+
+# Makineye ozel arac ayarlari
+.claude/settings.local.json
