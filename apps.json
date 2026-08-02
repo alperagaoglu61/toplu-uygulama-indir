@@ -1,10 +1,10 @@
-﻿{
+{
   "programlar": [
     {
       "ad": "Google Chrome",
-      "url": "https://dl.google.com/chrome/install/standalonesetup64.exe",
-      "dosya": "ChromeSetup64.exe",
-      "aciklama": "Google Chrome 64-bit bagimsiz kurulum"
+      "url": "https://dl.google.com/tag/s/appguid%3D%7B8A69D345-D564-463C-AFF1-A69D9E530F96%7D%26iid%3D%7BBDCB10F4-B371-FE98-184C-4A4F96D0161A%7D%26lang%3Dtr%26browser%3D4%26usagestats%3D1%26appname%3DGoogle%2520Chrome%26needsadmin%3Dprefers%26ap%3D-arch_x64-statsdef_1%26installdataindex%3Dempty/update2/installers/ChromeSetup.exe",
+      "dosya": "ChromeSetup.exe",
+      "aciklama": "Google Chrome web kurulumu (TR)"
     },
     {
       "ad": "Steam",
@@ -13,16 +13,94 @@
       "aciklama": "Valve Steam istemcisi"
     },
     {
+      "ad": "Riot Games",
+      "url": "https://valorant.secure.dyn.riotcdn.net/channels/public/x/installer/current/live.live.eu.exe",
+      "dosya": "RiotGames-Valorant-Setup.exe",
+      "aciklama": "Riot Games istemcisi / Valorant kurulumu (EU)"
+    },
+    {
+      "ad": "İnternet Download Manager",
+      "url": "https://download.internetdownloadmanager.com/idman643build7.exe",
+      "dosya": "idman643build7.exe",
+      "aciklama": "Internet Download Manager 6.43 build 7"
+    },
+    {
       "ad": "Spotify",
       "url": "https://download.scdn.co/SpotifySetup.exe",
       "dosya": "SpotifySetup.exe",
       "aciklama": "Spotify masaustu (web installer)"
     },
     {
-      "ad": "Valorant",
-      "url": "https://valorant.secure.dyn.riotcdn.net/channels/public/x/installer/current/live.live.eu.exe",
-      "dosya": "Valorant-Setup.exe",
-      "aciklama": "Riot Games / Valorant kurulumu"
+      "ad": "İntel Driver Support",
+      "url": "https://dsadata.intel.com/installer",
+      "dosya": "Intel-DSA-Installer.exe",
+      "aciklama": "Intel Driver & Support Assistant kurulumu"
+    },
+    {
+      "ad": "Nvidia App",
+      "url": "https://us.download.nvidia.com/nvapp/client/11.0.8.299/NVIDIA_app_v11.0.8.299.exe",
+      "dosya": "NVIDIA_app_v11.0.8.299.exe",
+      "aciklama": "NVIDIA App surum 11.0.8.299"
+    },
+    {
+      "ad": "Microsoft Visual C++ 2005 x86",
+      "url": "https://download.microsoft.com/download/8/b/4/8b42259f-5d70-43f4-ac2e-4b208fd8d66a/vcredist_x86.EXE",
+      "dosya": "vcredist2005_x86.exe",
+      "aciklama": "Visual C++ 2005 Redistributable (x86)"
+    },
+    {
+      "ad": "Microsoft Visual C++ 2005 x64",
+      "url": "https://download.microsoft.com/download/8/b/4/8b42259f-5d70-43f4-ac2e-4b208fd8d66a/vcredist_x64.EXE",
+      "dosya": "vcredist2005_x64.exe",
+      "aciklama": "Visual C++ 2005 Redistributable (x64)"
+    },
+    {
+      "ad": "Microsoft Visual C++ 2008 x86",
+      "url": "https://download.microsoft.com/download/5/d/8/5d8c65cb-c849-4025-8e95-c3966cafd8ae/vcredist_x86.exe",
+      "dosya": "vcredist2008_x86.exe",
+      "aciklama": "Visual C++ 2008 Redistributable (x86)"
+    },
+    {
+      "ad": "Microsoft Visual C++ 2008 x64",
+      "url": "https://download.microsoft.com/download/5/d/8/5d8c65cb-c849-4025-8e95-c3966cafd8ae/vcredist_x64.exe",
+      "dosya": "vcredist2008_x64.exe",
+      "aciklama": "Visual C++ 2008 Redistributable (x64)"
+    },
+    {
+      "ad": "Microsoft Visual C++ 2010 x86",
+      "url": "https://download.microsoft.com/download/1/6/5/165255e7-1014-4d0a-b094-b6a430a6bffc/vcredist_x86.exe",
+      "dosya": "vcredist2010_x86.exe",
+      "aciklama": "Visual C++ 2010 Redistributable (x86)"
+    },
+    {
+      "ad": "Microsoft Visual C++ 2010 x64",
+      "url": "https://download.microsoft.com/download/1/6/5/165255e7-1014-4d0a-b094-b6a430a6bffc/vcredist_x64.exe",
+      "dosya": "vcredist2010_x64.exe",
+      "aciklama": "Visual C++ 2010 Redistributable (x64)"
+    },
+    {
+      "ad": "Winrar",
+      "url": "https://www.rarlab.com/rar/winrar-x64-713tr.exe",
+      "dosya": "winrar-x64-713tr.exe",
+      "aciklama": "WinRAR 7.13 x64 Turkce"
+    },
+    {
+      "ad": "Partition Wizard",
+      "url": "https://cdn2.minitool.com/?p=pw&e=pw-free",
+      "dosya": "PartitionWizard-Free.exe",
+      "aciklama": "MiniTool Partition Wizard Free"
+    },
+    {
+      "ad": "CPU-Z",
+      "url": "https://download.cpuid.com/cpu-z/cpu-z_2.20.2-en.exe",
+      "dosya": "cpu-z_2.20.2-en.exe",
+      "aciklama": "CPUID CPU-Z 2.20.2 (EN)"
+    },
+    {
+      "ad": "Tor Browser",
+      "url": "https://dist.torproject.org/torbrowser/15.0.19/tor-browser-windows-x86_64-portable-15.0.19.exe",
+      "dosya": "tor-browser-windows-x86_64-portable-15.0.19.exe",
+      "aciklama": "Tor Browser 15.0.19 tasinabilir (x86_64)"
     }
   ]
 }

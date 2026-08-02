@@ -997,6 +997,7 @@ function ConvertTo-SadeHata {
     if ($m -match 'No such host|remote name|Uzak ad|bilinen bir ana|ana bilgisayar') { return 'Sunucu adi cozulemedi. Internet baglantisini kontrol et.' }
     if ($m -match 'timed out|zaman aşımı|zaman asimi|TaskCanceled')                  { return 'Baglanti zaman asimina ugradi.' }
     if ($m -match 'SSL|secure channel|güvenli kanal|sertifika|certificate')          { return 'Guvenli baglanti kurulamadi (TLS/sertifika).' }
+    if ($m -match 'virus|virüs|potentially unwanted|istenmeyen yaz')                 { return 'Antivirus dosyayi engelledi veya karantinaya aldi.' }
     if ($m -match 'unable to connect|refused|bağlantı kapatıldı|bağlantı kurulamadı|reddedildi') { return 'Sunucuya baglanilamadi. Internet baglantisini kontrol et.' }
     $ilk = ($m -split '(\r?\n| \| | -> )')[0]
     if ($ilk.Length -gt 140) { $ilk = $ilk.Substring(0, 140) + '...' }
@@ -1129,9 +1130,9 @@ function Show-Menu {
         $cikisTus = if ($qCikis) { 'Q' } else { 'Esc' }
         $satirlar = @()
         $satirlar += ,@(@{ t = ''; c = 'Gray' })
-        $satirlar += ,@(@{ t = '  TOPLU PROGRAM INDIRICI'; c = 'Cyan' })
-        $satirlar += ,@(@{ t = '  Hangi programlari indirmek istersin?'; c = 'White' })
-        $satirlar += ,@(@{ t = ('  (↑↓ gez · Space sec · Ctrl+A hepsi · yaz=ara · Home/End/PgUp/PgDn · Enter indir · {0} cikis)' -f $cikisTus); c = 'DarkGray' })
+        $satirlar += ,@(@{ t = '  TOPLU PROGRAM INDIR'; c = 'Cyan' })
+        $satirlar += ,@(@{ t = '  Hangi programları indirmek istersin ?'; c = 'White' })
+        $satirlar += ,@(@{ t = ('  ( ↑↓=Gezinti - Space=Seçim - *=Tümünü seç - Yaz=Ara - Enter=İndir - {0}=Çıkış )' -f $cikisTus); c = 'DarkGray' })
         $satirlar += ,@(@{ t = ''; c = 'Gray' })
 
         if ($ust -gt 0) {
@@ -1186,7 +1187,10 @@ function Show-Menu {
         $tus = Read-Tus
         $ctrl = ($tus.Modifiers -band [ConsoleModifiers]::Control) -ne 0
 
-        if ($ctrl -and $tus.Key -eq 'A') {
+        # Ctrl+A'yi conhost/Windows Terminal kendi "tumunu sec"i icin yutuyor, tus
+        # uygulamaya hic gelmiyor. Bu yuzden * ayni isi yapar. Ham 0x01 de kabul:
+        # bazi terminaller Control bayragini set etmeden sadece karakteri yolluyor.
+        if (($ctrl -and $tus.Key -eq 'A') -or $tus.KeyChar -eq [char]1 -or $tus.KeyChar -eq '*') {
             $script:MenuUyari = ''; $araYazi = ''
             $hepsi = ($secimSayisi -eq $n)
             for ($i = 0; $i -lt $n; $i++) { $secili[$i] = -not $hepsi }
@@ -1490,6 +1494,7 @@ function Start-IndirmeKuyrugu {
     Reserve-Panel $panelY
 
     $tamamlandi = $false
+    $script:KuyrukHatasi = ''
     try {
         while ($bekleyen.Count -gt 0 -or $aktif.Count -gt 0) {
 
@@ -1531,7 +1536,13 @@ function Start-IndirmeKuyrugu {
             $bitenler = @($aktif | Where-Object { $_.Job.Finished })
             foreach ($b in $bitenler) {
                 $aktif.Remove($b)
-                $s = Complete-Indirme -Is $b
+                # Tek programin tamamlama hatasi (AV kilidi, disk vb.) tum oturumu dusurmesin.
+                try { $s = Complete-Indirme -Is $b }
+                catch {
+                    Write-Log 'HATA' ("{0} tamamlama hatasi: {1}" -f $b.Ad, $_.Exception.ToString())
+                    $s = New-Sonuc -Ad $b.Ad -Durum 'HATA' -Bayt $b.Job.GetReceived() `
+                                   -Mesaj (ConvertTo-SadeHata $_.Exception.Message)
+                }
                 [void]$sonuclar.Add($s)
                 $renk = switch ($s.Durum) { 'Tamamlandi' { 'Green' } 'Atlandi' { 'DarkGray' } default { 'Red' } }
                 $isaret = if ($s.Durum -eq 'Tamamlandi') { '✓' } else { '✗' }
@@ -1543,6 +1554,11 @@ function Start-IndirmeKuyrugu {
         }
         $tamamlandi = $true
     }
+    catch {
+        # Beklenmeyen hata: yut, finally aktifleri iptal etsin, ozet yine de basilsin.
+        Write-Log 'HATA' ("Kuyruk beklenmeyen hata: {0}" -f $_.Exception.ToString())
+        $script:KuyrukHatasi = ConvertTo-SadeHata $_.Exception.Message
+    }
     finally {
         if (-not $tamamlandi) {
             # Ctrl+C: aktif indirmeler iptal, yarim dosyalar diskte kalir.
@@ -1553,11 +1569,19 @@ function Start-IndirmeKuyrugu {
             }
             try { [Console]::SetCursorPosition(0, $script:PanelUst) } catch { }
             Write-Host ''
+            if ($script:KuyrukHatasi) {
+                Write-Host ('  Beklenmeyen hata, kalan indirmeler durduruldu: {0}' -f $script:KuyrukHatasi) -ForegroundColor Red
+            }
             Write-Host '  Iptal edildi. Yarim dosyalar diskte birakildi:' -ForegroundColor Yellow
             foreach ($a in $aktif) {
                 Write-Host ('    {0} — {1} indi ({2})' -f $a.Ad, (Format-Boyut $a.Job.GetReceived()),
                             (Split-Path -Leaf ($a.Yol + '.indiriliyor'))) -ForegroundColor DarkYellow
                 Write-Log 'UYARI' ("{0} iptal edildi, {1} byte yarim kaldi" -f $a.Ad, $a.Job.GetReceived())
+                [void]$sonuclar.Add((New-Sonuc -Ad $a.Ad -Durum 'Iptal' -Bayt $a.Job.GetReceived() `
+                                     -Boyut (Format-Boyut $a.Job.GetReceived()) -Mesaj 'yarim dosya diskte, devam edilebilir'))
+            }
+            foreach ($b in $bekleyen) {
+                [void]$sonuclar.Add((New-Sonuc -Ad $b.Ad -Durum 'Iptal' -Mesaj 'siraya girmeden iptal edildi'))
             }
             Write-Host '  Script tekrar calistirildiginda "Devam et" secenegi sunulacak.' -ForegroundColor DarkGray
             Write-Host ''
@@ -1571,12 +1595,50 @@ function Start-IndirmeKuyrugu {
 # 8. Dogrulama
 # ---------------------------------------------------------------------------
 
+# Antivirus indirme biter bitmez dosyayi tarar ve kisa sure kilitler; bazen de
+# karantinaya alip siler. Dogrulama bu yuzden dogrudan dosyaya dalmaz.
+# Doner: 'Var' (okunabilir), 'Yok' (silinmis), 'Kilitli' (acilamiyor).
+function Test-DosyaErisimi {
+    param([string]$Yol, [int]$Deneme = 5)
+    for ($d = 1; $d -le $Deneme; $d++) {
+        if (-not (Test-Path -LiteralPath $Yol)) { return 'Yok' }
+        try {
+            $fs = [IO.File]::Open($Yol, [IO.FileMode]::Open, [IO.FileAccess]::Read, [IO.FileShare]::ReadWrite)
+            $fs.Dispose()
+            return 'Var'
+        } catch {
+            if ($d -lt $Deneme) { Start-Sleep -Milliseconds (200 * $d) }
+        }
+    }
+    if (-not (Test-Path -LiteralPath $Yol)) { return 'Yok' }
+    return 'Kilitli'
+}
+
 function Test-IndirilenDosya {
     param([string]$Yol, [long]$BeklenenBoyut)
 
     $sonuc = [pscustomobject]@{ Gecerli = $true; Imza = '—'; Uyari = '' }
 
-    $fi = Get-Item -LiteralPath $Yol
+    $erisim = Test-DosyaErisimi -Yol $Yol
+    if ($erisim -eq 'Yok') {
+        $sonuc.Gecerli = $false
+        $sonuc.Uyari   = 'Dosya kayboldu (antivirus karantinaya almis olabilir)'
+        return $sonuc
+    }
+    if ($erisim -eq 'Kilitli') {
+        # Indirme bitti, dosya diskte; sadece dogrulanamadi. Basarisiz sayma.
+        $sonuc.Imza  = 'Kontrol edilemedi'
+        $sonuc.Uyari = 'Dosya kilitli (antivirus tariyor olabilir), dogrulama atlandi'
+        return $sonuc
+    }
+
+    try { $fi = Get-Item -LiteralPath $Yol -ErrorAction Stop }
+    catch {
+        $sonuc.Gecerli = $false
+        $sonuc.Uyari   = ('Dosya okunamadi: {0}' -f $_.Exception.Message)
+        return $sonuc
+    }
+
     if ($fi.Length -le 0) {
         $sonuc.Gecerli = $false; $sonuc.Uyari = 'Dosya bos (0 bayt)'; return $sonuc
     }
@@ -1588,8 +1650,14 @@ function Test-IndirilenDosya {
 
     # Ilk iki bayt MZ mi? Degilse CDN'den HTML hata sayfasi gelmis olabilir.
     $bas = New-Object byte[] 4
-    $fs = [IO.File]::OpenRead($Yol)
-    try { [void]$fs.Read($bas, 0, 4) } finally { $fs.Dispose() }
+    try {
+        $fs = [IO.File]::Open($Yol, [IO.FileMode]::Open, [IO.FileAccess]::Read, [IO.FileShare]::ReadWrite)
+        try { [void]$fs.Read($bas, 0, 4) } finally { $fs.Dispose() }
+    } catch {
+        $sonuc.Imza  = 'Kontrol edilemedi'
+        $sonuc.Uyari = 'Dosya turu kontrol edilemedi (dosya kilitli)'
+        return $sonuc
+    }
 
     if ($bas[0] -eq 0x4D -and $bas[1] -eq 0x5A) {
         # MZ - calistirilabilir
@@ -1624,7 +1692,10 @@ function Complete-Indirme {
     }
 
     $sure   = $job.ElapsedSeconds()
-    $alinan = (Get-Item -LiteralPath $Is.Yol).Length
+    # Dosya karantinaya alinmis olabilir; boyut okunamazsa sayaca dus.
+    $alinan = 0L
+    try { $alinan = (Get-Item -LiteralPath $Is.Yol -ErrorAction Stop).Length }
+    catch { $alinan = $job.GetReceived() }
     $ortHiz = if ($sure -gt 0.4) { Format-Hiz ($job.GetReceived() / $sure) } else { '—' }
     $tepe   = if ($Is.TepeHiz -gt 0) { Format-Hiz $Is.TepeHiz } else { '—' }
 
