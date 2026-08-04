@@ -97,6 +97,12 @@
       "aciklama": "CPUID CPU-Z 2.20.2 (EN)"
     },
     {
+      "ad": "WhatsApp",
+      "url": "https://get.microsoft.com/installer/download/9NKSQGP7F2NH",
+      "dosya": "WhatsAppInstaller.exe",
+      "aciklama": "WhatsApp masaustu (Windows 10 64-bit 1903+)"
+    },
+    {
       "ad": "Tor Browser",
       "url": "https://dist.torproject.org/torbrowser/15.0.19/tor-browser-windows-x86_64-portable-15.0.19.exe",
       "dosya": "tor-browser-windows-x86_64-portable-15.0.19.exe",
