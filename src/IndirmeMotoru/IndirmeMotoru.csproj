@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Ortak indirme motoru. Tek kaynak: Motor.cs
+    Hem WPF GUI hem konsol script (ProgramIndir.ps1) bu kutuphaneyi kullanir.
+
+    Iki hedef:
+      net48   -> Windows PowerShell 5.1 (.NET Framework) icin
+      net8.0  -> PowerShell 7 (.NET Core) ve GUI icin
+    Cikti lib\<hedef>\ altina kopyalanir, script oradan yukler.
+  -->
+
+  <PropertyGroup>
+    <TargetFrameworks>net48;net8.0</TargetFrameworks>
+    <AssemblyName>IndirmeMotoru</AssemblyName>
+    <RootNamespace>TopluIndir</RootNamespace>
+    <LangVersion>latest</LangVersion>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+    <AppendTargetFrameworkToOutputPath>true</AppendTargetFrameworkToOutputPath>
+    <OutputPath>$(MSBuildThisFileDirectory)..\..\lib\</OutputPath>
+    <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+  </PropertyGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'net48'">
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+
+</Project>

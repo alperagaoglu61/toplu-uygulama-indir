@@ -1,112 +1,666 @@
-{
+﻿{
   "programlar": [
     {
       "ad": "Google Chrome",
       "url": "https://dl.google.com/tag/s/appguid%3D%7B8A69D345-D564-463C-AFF1-A69D9E530F96%7D%26iid%3D%7BBDCB10F4-B371-FE98-184C-4A4F96D0161A%7D%26lang%3Dtr%26browser%3D4%26usagestats%3D1%26appname%3DGoogle%2520Chrome%26needsadmin%3Dprefers%26ap%3D-arch_x64-statsdef_1%26installdataindex%3Dempty/update2/installers/ChromeSetup.exe",
       "dosya": "ChromeSetup.exe",
-      "aciklama": "Google Chrome web kurulumu (TR)"
+      "aciklama": "Google Chrome web kurulumu (TR)",
+      "kategori": "tarayici",
+      "ikon": "googlechrome",
+      "boyutTahmini": 12411832
     },
     {
       "ad": "Steam",
       "url": "https://cdn.akamai.steamstatic.com/client/installer/SteamSetup.exe",
       "dosya": "SteamSetup.exe",
-      "aciklama": "Valve Steam istemcisi"
+      "aciklama": "Valve Steam istemcisi",
+      "kategori": "oyun",
+      "ikon": "steam"
     },
     {
       "ad": "Riot Games",
       "url": "https://valorant.secure.dyn.riotcdn.net/channels/public/x/installer/current/live.live.eu.exe",
       "dosya": "RiotGames-Valorant-Setup.exe",
-      "aciklama": "Riot Games istemcisi / Valorant kurulumu (EU)"
+      "aciklama": "Riot Games istemcisi / Valorant kurulumu (EU)",
+      "kategori": "oyun",
+      "ikon": "riotgames",
+      "boyutTahmini": 74781928
     },
     {
       "ad": "İnternet Download Manager",
       "url": "https://download.internetdownloadmanager.com/idman643build7.exe",
       "dosya": "idman643build7.exe",
-      "aciklama": "Internet Download Manager 6.43 build 7"
+      "aciklama": "Internet Download Manager 6.43 build 7",
+      "kategori": "araclar",
+      "ikon": "",
+      "boyutTahmini": 12476968
     },
     {
       "ad": "Spotify",
       "url": "https://download.scdn.co/SpotifySetup.exe",
       "dosya": "SpotifySetup.exe",
-      "aciklama": "Spotify masaustu (web installer)"
+      "aciklama": "Spotify masaustu (web installer)",
+      "kategori": "medya",
+      "ikon": "spotify",
+      "boyutTahmini": 1071592
     },
     {
       "ad": "İntel Driver Support",
       "url": "https://dsadata.intel.com/installer",
       "dosya": "Intel-DSA-Installer.exe",
-      "aciklama": "Intel Driver & Support Assistant kurulumu"
+      "aciklama": "Intel Driver & Support Assistant kurulumu",
+      "kategori": "redistributable",
+      "ikon": "intel",
+      "boyutTahmini": 8724776
     },
     {
       "ad": "Nvidia App",
       "url": "https://us.download.nvidia.com/nvapp/client/11.0.8.299/NVIDIA_app_v11.0.8.299.exe",
       "dosya": "NVIDIA_app_v11.0.8.299.exe",
-      "aciklama": "NVIDIA App surum 11.0.8.299"
+      "aciklama": "NVIDIA App surum 11.0.8.299",
+      "kategori": "redistributable",
+      "ikon": "nvidia",
+      "boyutTahmini": 176843352
     },
     {
       "ad": "Microsoft Visual C++ 2005 x86",
       "url": "https://download.microsoft.com/download/8/b/4/8b42259f-5d70-43f4-ac2e-4b208fd8d66a/vcredist_x86.EXE",
       "dosya": "vcredist2005_x86.exe",
-      "aciklama": "Visual C++ 2005 Redistributable (x86)"
+      "aciklama": "Visual C++ 2005 Redistributable (x86)",
+      "kategori": "redistributable",
+      "ikon": "cplusplus",
+      "boyutTahmini": 2710520
     },
     {
       "ad": "Microsoft Visual C++ 2005 x64",
       "url": "https://download.microsoft.com/download/8/b/4/8b42259f-5d70-43f4-ac2e-4b208fd8d66a/vcredist_x64.EXE",
       "dosya": "vcredist2005_x64.exe",
-      "aciklama": "Visual C++ 2005 Redistributable (x64)"
+      "aciklama": "Visual C++ 2005 Redistributable (x64)",
+      "kategori": "redistributable",
+      "ikon": "cplusplus",
+      "boyutTahmini": 3179000
     },
     {
       "ad": "Microsoft Visual C++ 2008 x86",
       "url": "https://download.microsoft.com/download/5/d/8/5d8c65cb-c849-4025-8e95-c3966cafd8ae/vcredist_x86.exe",
       "dosya": "vcredist2008_x86.exe",
-      "aciklama": "Visual C++ 2008 Redistributable (x86)"
+      "aciklama": "Visual C++ 2008 Redistributable (x86)",
+      "kategori": "redistributable",
+      "ikon": "cplusplus",
+      "boyutTahmini": 4483040
     },
     {
       "ad": "Microsoft Visual C++ 2008 x64",
       "url": "https://download.microsoft.com/download/5/d/8/5d8c65cb-c849-4025-8e95-c3966cafd8ae/vcredist_x64.exe",
       "dosya": "vcredist2008_x64.exe",
-      "aciklama": "Visual C++ 2008 Redistributable (x64)"
+      "aciklama": "Visual C++ 2008 Redistributable (x64)",
+      "kategori": "redistributable",
+      "ikon": "cplusplus",
+      "boyutTahmini": 5211080
     },
     {
       "ad": "Microsoft Visual C++ 2010 x86",
       "url": "https://download.microsoft.com/download/1/6/5/165255e7-1014-4d0a-b094-b6a430a6bffc/vcredist_x86.exe",
       "dosya": "vcredist2010_x86.exe",
-      "aciklama": "Visual C++ 2010 Redistributable (x86)"
+      "aciklama": "Visual C++ 2010 Redistributable (x86)",
+      "kategori": "redistributable",
+      "ikon": "cplusplus",
+      "boyutTahmini": 8993744
     },
     {
       "ad": "Microsoft Visual C++ 2010 x64",
       "url": "https://download.microsoft.com/download/1/6/5/165255e7-1014-4d0a-b094-b6a430a6bffc/vcredist_x64.exe",
       "dosya": "vcredist2010_x64.exe",
-      "aciklama": "Visual C++ 2010 Redistributable (x64)"
+      "aciklama": "Visual C++ 2010 Redistributable (x64)",
+      "kategori": "redistributable",
+      "ikon": "cplusplus",
+      "boyutTahmini": 10277328
+    },
+    {
+      "ad": "Microsoft Visual C++ 2012 x86",
+      "url": "https://download.microsoft.com/download/1/6/B/16B06F60-3B20-4FF2-B699-5E9B7962F9AE/VSU_4/vcredist_x86.exe",
+      "dosya": "vcredist2012_x86.exe",
+      "aciklama": "Visual C++ 2012 Update 4 Redistributable (x86)",
+      "kategori": "redistributable",
+      "ikon": "cplusplus",
+      "boyutTahmini": 6554576
+    },
+    {
+      "ad": "Microsoft Visual C++ 2012 x64",
+      "url": "https://download.microsoft.com/download/1/6/B/16B06F60-3B20-4FF2-B699-5E9B7962F9AE/VSU_4/vcredist_x64.exe",
+      "dosya": "vcredist2012_x64.exe",
+      "aciklama": "Visual C++ 2012 Update 4 Redistributable (x64)",
+      "kategori": "redistributable",
+      "ikon": "cplusplus",
+      "boyutTahmini": 7186992
+    },
+    {
+      "ad": "Microsoft Visual C++ 2013 x86",
+      "url": "https://download.microsoft.com/download/2/E/6/2E61CFA4-993B-4DD4-91DA-3737CD5CD6E3/vcredist_x86.exe",
+      "dosya": "vcredist2013_x86.exe",
+      "aciklama": "Visual C++ 2013 Redistributable (x86)",
+      "kategori": "redistributable",
+      "ikon": "cplusplus",
+      "boyutTahmini": 6503984
+    },
+    {
+      "ad": "Microsoft Visual C++ 2013 x64",
+      "url": "https://download.microsoft.com/download/2/E/6/2E61CFA4-993B-4DD4-91DA-3737CD5CD6E3/vcredist_x64.exe",
+      "dosya": "vcredist2013_x64.exe",
+      "aciklama": "Visual C++ 2013 Redistributable (x64)",
+      "kategori": "redistributable",
+      "ikon": "cplusplus",
+      "boyutTahmini": 7194312
+    },
+    {
+      "ad": "Microsoft Visual C++ 2015-2022 x86",
+      "url": "https://aka.ms/vs/17/release/vc_redist.x86.exe",
+      "dosya": "VC_redist.x86.exe",
+      "aciklama": "Visual C++ 2015-2022 Redistributable son surum (x86)",
+      "kategori": "redistributable",
+      "ikon": "cplusplus",
+      "boyutTahmini": 13953392
+    },
+    {
+      "ad": "Microsoft Visual C++ 2015-2022 x64",
+      "url": "https://aka.ms/vs/17/release/vc_redist.x64.exe",
+      "dosya": "VC_redist.x64.exe",
+      "aciklama": "Visual C++ 2015-2022 Redistributable son surum (x64)",
+      "kategori": "redistributable",
+      "ikon": "cplusplus",
+      "boyutTahmini": 25635768
+    },
+    {
+      "ad": ".NET Framework 4.8",
+      "url": "https://go.microsoft.com/fwlink/?linkid=2088631",
+      "dosya": "NDP48-x86-x64-AllOS-ENU.exe",
+      "aciklama": ".NET Framework 4.8 cevrimdisi kurulum (x86+x64)",
+      "kategori": "redistributable",
+      "ikon": "dotnet",
+      "boyutTahmini": 121346568
+    },
+    {
+      "ad": ".NET Desktop Runtime 8 (LTS)",
+      "url": "https://aka.ms/dotnet/8.0/windowsdesktop-runtime-win-x64.exe",
+      "dosya": "windowsdesktop-runtime-8-win-x64.exe",
+      "aciklama": ".NET Desktop Runtime 8 LTS son yama (x64)",
+      "kategori": "redistributable",
+      "ikon": "dotnet",
+      "boyutTahmini": 58699856
+    },
+    {
+      "ad": ".NET Desktop Runtime 10 (LTS)",
+      "url": "https://aka.ms/dotnet/10.0/windowsdesktop-runtime-win-x64.exe",
+      "dosya": "windowsdesktop-runtime-10-win-x64.exe",
+      "aciklama": ".NET Desktop Runtime 10 LTS son yama (x64)",
+      "kategori": "redistributable",
+      "ikon": "dotnet",
+      "boyutTahmini": 60053808
     },
     {
       "ad": "Winrar",
       "url": "https://www.rarlab.com/rar/winrar-x64-713tr.exe",
       "dosya": "winrar-x64-713tr.exe",
-      "aciklama": "WinRAR 7.13 x64 Turkce"
+      "aciklama": "WinRAR 7.13 x64 Turkce",
+      "kategori": "araclar",
+      "ikon": "",
+      "boyutTahmini": 3826824
     },
     {
       "ad": "Partition Wizard",
       "url": "https://cdn2.minitool.com/?p=pw&e=pw-free",
       "dosya": "PartitionWizard-Free.exe",
-      "aciklama": "MiniTool Partition Wizard Free"
+      "aciklama": "MiniTool Partition Wizard Free",
+      "kategori": "araclar",
+      "ikon": ""
     },
     {
       "ad": "CPU-Z",
       "url": "https://download.cpuid.com/cpu-z/cpu-z_2.20.2-en.exe",
       "dosya": "cpu-z_2.20.2-en.exe",
-      "aciklama": "CPUID CPU-Z 2.20.2 (EN)"
+      "aciklama": "CPUID CPU-Z 2.20.2 (EN)",
+      "kategori": "araclar",
+      "ikon": "",
+      "boyutTahmini": 4811984
     },
     {
       "ad": "WhatsApp",
       "url": "https://get.microsoft.com/installer/download/9NKSQGP7F2NH",
       "dosya": "WhatsAppInstaller.exe",
-      "aciklama": "WhatsApp masaustu (Windows 10 64-bit 1903+)"
+      "aciklama": "WhatsApp masaustu (Windows 10 64-bit 1903+)",
+      "kategori": "iletisim",
+      "ikon": "whatsapp",
+      "boyutTahmini": 1462848
     },
     {
       "ad": "Tor Browser",
       "url": "https://dist.torproject.org/torbrowser/15.0.19/tor-browser-windows-x86_64-portable-15.0.19.exe",
       "dosya": "tor-browser-windows-x86_64-portable-15.0.19.exe",
-      "aciklama": "Tor Browser 15.0.19 tasinabilir (x86_64)"
+      "aciklama": "Tor Browser 15.0.19 tasinabilir (x86_64)",
+      "kategori": "tarayici",
+      "ikon": "torbrowser",
+      "boyutTahmini": 113580912
+    },
+    {
+      "ad": "Opera",
+      "url": "https://net.geo.opera.com/opera/stable/windows",
+      "dosya": "OperaSetup.exe",
+      "aciklama": "Opera kararli surum (web installer)",
+      "kategori": "tarayici",
+      "ikon": "opera",
+      "boyutTahmini": 3255552
+    },
+    {
+      "ad": "Opera GX",
+      "url": "https://net.geo.opera.com/opera_gx/stable/windows",
+      "dosya": "OperaGXSetup.exe",
+      "aciklama": "Opera GX kararli surum (web installer)",
+      "kategori": "tarayici",
+      "ikon": "operagx",
+      "boyutTahmini": 4135000
+    },
+    {
+      "ad": "Mozilla Firefox",
+      "url": "https://download.mozilla.org/?product=firefox-latest-ssl&os=win64&lang=tr",
+      "dosya": "FirefoxSetup-tr-win64.exe",
+      "aciklama": "Mozilla Firefox son surum (TR, 64-bit)",
+      "kategori": "tarayici",
+      "ikon": "firefoxbrowser",
+      "boyutTahmini": 94716896
+    },
+    {
+      "ad": "Brave",
+      "url": "https://laptop-updates.brave.com/latest/winx64",
+      "dosya": "BraveBrowserSetup.exe",
+      "aciklama": "Brave Browser son surum (64-bit)",
+      "kategori": "tarayici",
+      "ikon": "brave",
+      "boyutTahmini": 1276768
+    },
+    {
+      "ad": "Discord",
+      "url": "https://get.microsoft.com/installer/download/XPDC2RH70K22MN",
+      "dosya": "DiscordInstaller.exe",
+      "aciklama": "Discord masaustu (Microsoft Store dagitimi)",
+      "kategori": "iletisim",
+      "ikon": "discord",
+      "boyutTahmini": 1462848
+    },
+    {
+      "ad": "VLC",
+      "url": [
+        "https://download.videolan.org/pub/videolan/vlc/3.0.23/win64/vlc-3.0.23-win64.exe",
+        "https://get.videolan.org/vlc/last/win64/vlc-3.0.23-win64.exe"
+      ],
+      "dosya": "vlc-3.0.23-win64.exe",
+      "aciklama": "VideoLAN VLC 3.0.23 (64-bit)",
+      "kategori": "medya",
+      "ikon": "vlcmediaplayer"
+    },
+    {
+      "ad": "Epic Games Launcher",
+      "url": "https://launcher-public-service-prod06.ol.epicgames.com/launcher/api/installer/download/EpicGamesLauncherInstaller.msi",
+      "dosya": "EpicGamesLauncherInstaller.msi",
+      "aciklama": "Epic Games Launcher son surum",
+      "kategori": "oyun",
+      "ikon": "epicgames",
+      "boyutTahmini": 87310336
+    },
+    {
+      "ad": "OBS Studio",
+      "url": "https://github.com/obsproject/obs-studio/releases/download/32.2.1/OBS-Studio-32.2.1-Windows-x64-Installer.exe",
+      "dosya": "OBS-Studio-32.2.1-Windows-x64-Installer.exe",
+      "aciklama": "OBS Studio 32.2.1 (64-bit)",
+      "kategori": "medya",
+      "ikon": "obsstudio",
+      "boyutTahmini": 159828560
+    },
+    {
+      "ad": "Battle.net",
+      "url": "https://www.battle.net/download/getInstallerForGame?os=win&gameProgram=BATTLENET_APP&version=Live",
+      "dosya": "Battle.net-Setup.exe",
+      "aciklama": "Blizzard Battle.net istemcisi",
+      "kategori": "oyun",
+      "ikon": "battledotnet",
+      "boyutTahmini": 4896464
+    },
+    {
+      "ad": "EA App",
+      "url": "https://origin-a.akamaihd.net/EA-Desktop-Client-Download/installer-releases/EAappInstaller.exe",
+      "dosya": "EAappInstaller.exe",
+      "aciklama": "EA App masaustu istemcisi",
+      "kategori": "oyun",
+      "ikon": "ea",
+      "boyutTahmini": 2140792
+    },
+    {
+      "ad": "7-Zip",
+      "url": "https://www.7-zip.org/a/7z2602-x64.exe",
+      "dosya": "7z2602-x64.exe",
+      "aciklama": "7-Zip 26.02 (x64)",
+      "kategori": "araclar",
+      "ikon": "7zip",
+      "boyutTahmini": 1657896
+    },
+    {
+      "ad": "DirectX Runtime",
+      "url": "https://download.microsoft.com/download/1/7/1/1718CCC4-6315-4D8E-9543-8E28A4E18C4C/dxwebsetup.exe",
+      "dosya": "dxwebsetup.exe",
+      "aciklama": "DirectX End-User Runtime web kurulumu",
+      "kategori": "redistributable",
+      "ikon": "",
+      "boyutTahmini": 295320
+    },
+    {
+      "ad": "AMD Surucu Indirici",
+      "url": "https://drivers.amd.com/drivers/installer/26.10/whql/amd-software-adrenalin-edition-26.7.1-minimalsetup-260724_web.exe",
+      "referer": "https://www.amd.com/en/support/download/drivers.html",
+      "dosya": "amd-software-adrenalin-26.7.1-minimalsetup_web.exe",
+      "aciklama": "AMD Software Adrenalin 26.7.1 web kurulumu (otomatik algilama)",
+      "kategori": "redistributable",
+      "ikon": "amd",
+      "boyutTahmini": 47812056
+    },
+    {
+      "ad": "Intel Arc Surucu Indirici",
+      "url": "https://downloadmirror.intel.com/923907/gfx_win_101.8864.exe",
+      "dosya": "gfx_win_101.8864.exe",
+      "aciklama": "Intel Arc / Iris Xe grafik surucusu 32.0.101.8864",
+      "kategori": "redistributable",
+      "ikon": "intel",
+      "boyutTahmini": 919998640
+    },
+    {
+      "ad": "Node.js",
+      "url": "https://nodejs.org/dist/v24.19.0/node-v24.19.0-x64.msi",
+      "dosya": "node-v24.19.0-x64.msi",
+      "aciklama": "Node.js 24.19.0 LTS (x64)",
+      "kategori": "gelistirici",
+      "ikon": "nodedotjs",
+      "boyutTahmini": 32972800
+    },
+    {
+      "ad": "PowerShell 7",
+      "url": "https://github.com/PowerShell/PowerShell/releases/download/v7.6.4/PowerShell-7.6.4-win-x64.msi",
+      "dosya": "PowerShell-7.6.4-win-x64.msi",
+      "aciklama": "PowerShell 7.6.4 (win-x64)",
+      "kategori": "gelistirici",
+      "ikon": "",
+      "boyutTahmini": 115515392
+    },
+    {
+      "ad": "Git",
+      "url": "https://github.com/git-for-windows/git/releases/download/v2.55.0.windows.3/Git-2.55.0.3-64-bit.exe",
+      "dosya": "Git-2.55.0.3-64-bit.exe",
+      "aciklama": "Git for Windows 2.55.0.3 (64-bit)",
+      "kategori": "gelistirici",
+      "ikon": "git",
+      "boyutTahmini": 65388144
+    },
+    {
+      "ad": "Telegram Desktop",
+      "url": "https://telegram.org/dl/desktop/win64",
+      "dosya": "tsetup-x64.exe",
+      "aciklama": "Telegram Desktop son surum (64-bit)",
+      "kategori": "iletisim",
+      "ikon": "telegram",
+      "boyutTahmini": 54500848
+    },
+    {
+      "ad": "Microsoft Teams",
+      "url": "https://go.microsoft.com/fwlink/?linkid=2196106",
+      "dosya": "MSTeamsSetup.exe",
+      "aciklama": "Microsoft Teams (yeni surum, x64)",
+      "kategori": "iletisim",
+      "ikon": "",
+      "boyutTahmini": 284008180
+    },
+    {
+      "ad": "Zoom",
+      "url": "https://zoom.us/client/latest/ZoomInstallerFull.exe?archType=x64",
+      "dosya": "ZoomInstallerFull.exe",
+      "aciklama": "Zoom Workplace masaustu istemcisi (x64)",
+      "kategori": "iletisim",
+      "ikon": "zoom",
+      "boyutTahmini": 176005576
+    },
+    {
+      "ad": "Notepad++",
+      "url": "https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.9.7/npp.8.9.7.Installer.x64.exe",
+      "dosya": "npp.8.9.7.Installer.x64.exe",
+      "aciklama": "Notepad++ 8.9.7 (64-bit)",
+      "kategori": "araclar",
+      "ikon": "notepadplusplus",
+      "boyutTahmini": 6933184
+    },
+    {
+      "ad": "CCleaner",
+      "url": "https://download.ccleaner.com/ccsetup.exe",
+      "dosya": "ccsetup.exe",
+      "aciklama": "CCleaner Free son surum",
+      "kategori": "araclar",
+      "ikon": "ccleaner",
+      "boyutTahmini": 88427352
+    },
+    {
+      "ad": "TeamViewer",
+      "url": "https://download.teamviewer.com/download/TeamViewer_Setup_x64.exe",
+      "dosya": "TeamViewer_Setup_x64.exe",
+      "aciklama": "TeamViewer tam surum (x64)",
+      "kategori": "araclar",
+      "ikon": "teamviewer",
+      "boyutTahmini": 83292032
+    },
+    {
+      "ad": "HWMonitor",
+      "url": "https://download.cpuid.com/hwmonitor/hwmonitor_1.67.exe",
+      "dosya": "hwmonitor_1.67.exe",
+      "aciklama": "CPUID HWMonitor 1.67",
+      "kategori": "araclar",
+      "ikon": "",
+      "boyutTahmini": 3631600
+    },
+    {
+      "ad": "Visual Studio Code",
+      "url": "https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-user",
+      "dosya": "VSCodeUserSetup-x64.exe",
+      "aciklama": "VS Code kararli surum (kullanici kurulumu, x64)",
+      "kategori": "gelistirici",
+      "ikon": "",
+      "boyutTahmini": 237798672
+    },
+    {
+      "ad": "Python",
+      "url": "https://www.python.org/ftp/python/3.14.7/python-3.14.7-amd64.exe",
+      "dosya": "python-3.14.7-amd64.exe",
+      "aciklama": "Python 3.14.7 (64-bit)",
+      "kategori": "gelistirici",
+      "ikon": "python",
+      "boyutTahmini": 33258168
+    },
+    {
+      "ad": "Java (Temurin 25 LTS)",
+      "url": "https://github.com/adoptium/temurin25-binaries/releases/download/jdk-25.0.4%2B7/OpenJDK25U-jdk_x64_windows_hotspot_25.0.4_7.msi",
+      "dosya": "OpenJDK25U-jdk_x64_windows_hotspot_25.0.4_7.msi",
+      "aciklama": "Eclipse Temurin JDK 25.0.4+7 LTS (x64)",
+      "kategori": "gelistirici",
+      "ikon": "eclipseadoptium",
+      "boyutTahmini": 115990528
+    },
+    {
+      "ad": "Paint.NET",
+      "url": "https://github.com/paintdotnet/release/releases/download/v5.1.12/paint.net.5.1.12.install.x64.zip",
+      "dosya": "paint.net.5.1.12.install.x64.zip",
+      "aciklama": "Paint.NET 5.1.12 (zip icinde kurulum dosyasi, x64)",
+      "kategori": "medya",
+      "ikon": "",
+      "boyutTahmini": 84238734
+    },
+    {
+      "ad": "Blender",
+      "url": "https://download.blender.org/release/Blender5.2/blender-5.2.0-windows-x64.msi",
+      "dosya": "blender-5.2.0-windows-x64.msi",
+      "aciklama": "Blender 5.2.0 (x64)",
+      "kategori": "medya",
+      "ikon": "blender",
+      "boyutTahmini": 365240320
+    },
+    {
+      "ad": "MSI Afterburner",
+      "url": "https://ftp.nluug.nl/pub/games/PC/guru3d/afterburner/%5BGuru3D%5D-MSIAfterburnerSetup466Build16757.zip",
+      "dosya": "MSIAfterburnerSetup-4.6.6.16757.zip",
+      "aciklama": "MSI Afterburner 4.6.6 build 16757 (zip icinde kurulum dosyasi)",
+      "kategori": "araclar",
+      "ikon": "msi",
+      "boyutTahmini": 42443037
+    },
+    {
+      "ad": "GeForce NOW",
+      "url": "https://download.nvidia.com/gfnpc/GeForceNOW-release.exe",
+      "dosya": "GeForceNOW-release.exe",
+      "aciklama": "NVIDIA GeForce NOW istemcisi",
+      "kategori": "oyun",
+      "ikon": "nvidia",
+      "boyutTahmini": 166346896
+    },
+    {
+      "ad": "GitHub Desktop",
+      "url": "https://central.github.com/deployments/desktop/desktop/latest/win32",
+      "dosya": "GitHubDesktopSetup-x64.exe",
+      "aciklama": "GitHub Desktop son surum (x64)",
+      "kategori": "gelistirici",
+      "ikon": "github",
+      "boyutTahmini": 308500256
+    },
+    {
+      "ad": "TranslucentTB",
+      "url": "https://get.microsoft.com/installer/download/9PF4KZ2VN4W9",
+      "dosya": "TranslucentTBInstaller.exe",
+      "aciklama": "TranslucentTB (Microsoft Store dagitimi)",
+      "kategori": "araclar",
+      "ikon": "",
+      "boyutTahmini": 1462848
+    },
+    {
+      "ad": "Revo Uninstaller",
+      "url": "https://94f29e82f377c2c0658d-388a64d31e58fcdf2a0581c5105c02bb.ssl.cf1.rackcdn.com/revosetup.exe",
+      "dosya": "revosetup.exe",
+      "aciklama": "Revo Uninstaller Free son surum",
+      "kategori": "araclar",
+      "ikon": "",
+      "boyutTahmini": 7456024
+    },
+    {
+      "ad": "GPU-Z",
+      "url": "https://www.techpowerup.com/download/techpowerup-gpu-z/",
+      "cozucu": "techpowerup",
+      "dosya": "GPU-Z.exe",
+      "aciklama": "TechPowerUp GPU-Z (link indirme aninda cozulur)",
+      "kategori": "araclar",
+      "ikon": ""
+    },
+    {
+      "ad": "Everything",
+      "url": "https://www.voidtools.com/Everything-1.4.1.1032.x64-Setup.exe",
+      "dosya": "Everything-1.4.1.1032.x64-Setup.exe",
+      "aciklama": "voidtools Everything 1.4.1.1032 (x64)",
+      "kategori": "araclar",
+      "ikon": "",
+      "boyutTahmini": 1998736
+    },
+    {
+      "ad": "Rufus",
+      "url": "https://github.com/pbatard/rufus/releases/download/v4.15/rufus-4.15.exe",
+      "dosya": "rufus-4.15.exe",
+      "aciklama": "Rufus 4.15 (tasinabilir, x64)",
+      "kategori": "araclar",
+      "ikon": "",
+      "boyutTahmini": 1989992
+    },
+    {
+      "ad": "Display Driver Uninstaller (DDU)",
+      "url": "https://www.wagnardsoft.com/DDU/download/DDU%20v18.1.5.3_setup.exe",
+      "dosya": "DDU-v18.1.5.3_setup.exe",
+      "aciklama": "Display Driver Uninstaller 18.1.5.3",
+      "kategori": "araclar",
+      "ikon": "",
+      "boyutTahmini": 1747240
+    },
+    {
+      "ad": "Oracle VM VirtualBox",
+      "url": "https://download.virtualbox.org/virtualbox/7.2.14/VirtualBox-7.2.14-174565-Win.exe",
+      "dosya": "VirtualBox-7.2.14-174565-Win.exe",
+      "aciklama": "Oracle VirtualBox 7.2.14 (Windows host)",
+      "kategori": "araclar",
+      "ikon": "virtualbox",
+      "boyutTahmini": 178059368
+    },
+    {
+      "ad": "Cinebench",
+      "url": "https://get.microsoft.com/installer/download/9PGZKJC81Q7J",
+      "dosya": "CinebenchInstaller.exe",
+      "aciklama": "Maxon Cinebench (Microsoft Store dagitimi)",
+      "kategori": "araclar",
+      "ikon": "cinema4d",
+      "boyutTahmini": 1462848
+    },
+    {
+      "ad": "FurMark",
+      "url": "https://gpumagick.com/downloads/files/2025/fm2/FurMark_2.9.0.0_Win64_Setup.exe",
+      "dosya": "FurMark_2.9.0.0_Win64_Setup.exe",
+      "aciklama": "Geeks3D FurMark 2.9.0.0 (x64)",
+      "kategori": "araclar",
+      "ikon": "",
+      "boyutTahmini": 33059466
+    },
+    {
+      "ad": "Prime95",
+      "url": "https://www.mersenne.org/download/software/v30/30.19/p95v3019b20.win64.zip",
+      "dosya": "p95v3019b20.win64.zip",
+      "aciklama": "Prime95 30.19 build 20 (zip, x64)",
+      "kategori": "araclar",
+      "ikon": "",
+      "boyutTahmini": 8805545
+    },
+    {
+      "ad": "Unigine Superposition",
+      "url": "https://assets.unigine.com/d/Unigine_Superposition-1.1.exe",
+      "dosya": "Unigine_Superposition-1.1.exe",
+      "aciklama": "Unigine Superposition 1.1 GPU benchmark / stres testi",
+      "kategori": "araclar",
+      "ikon": "",
+      "boyutTahmini": 1339177360
+    },
+    {
+      "ad": "HWiNFO64",
+      "url": [
+        "https://www.sac.sk/download/utildiag/hwi_850x.exe",
+        "https://www.hwinfo.com/files/hwi64_850.exe"
+      ],
+      "referer": "https://www.hwinfo.com/download/",
+      "dosya": "hwi64_850.exe",
+      "aciklama": "HWiNFO64 8.50 sensor / donanim bilgisi (x64)",
+      "kategori": "araclar",
+      "ikon": "",
+      "boyutTahmini": 20758384
+    },
+    {
+      "ad": "ShareX",
+      "url": "https://github.com/ShareX/ShareX/releases/download/v21.0.0/ShareX-21.0.0-setup-x64.exe",
+      "dosya": "ShareX-21.0.0-setup-x64.exe",
+      "aciklama": "ShareX 21.0.0 ekran goruntusu / ekran kaydi (x64)",
+      "kategori": "medya",
+      "ikon": "sharex",
+      "boyutTahmini": 139151207
+    },
+    {
+      "ad": "qBittorrent",
+      "url": "https://github.com/qbittorrent/qBittorrent/releases/download/release-5.2.3/qbittorrent_5.2.3_x64_setup.exe",
+      "dosya": "qbittorrent_5.2.3_x64_setup.exe",
+      "aciklama": "qBittorrent 5.2.3 torrent istemcisi (x64)",
+      "kategori": "araclar",
+      "ikon": "qbittorrent",
+      "boyutTahmini": 43100219
     }
   ]
 }

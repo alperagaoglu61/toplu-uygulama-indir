@@ -10,3 +10,9 @@ indirme-log.txt
 
 # Makineye ozel arac ayarlari
 .claude/settings.local.json
+
+# Derleme ciktilari
+bin/
+obj/
+lib/
+yayin/

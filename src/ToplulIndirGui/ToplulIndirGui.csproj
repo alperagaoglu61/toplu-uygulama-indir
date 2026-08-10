@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <LangVersion>latest</LangVersion>
+    <RootNamespace>TopluIndir.Gui</RootNamespace>
+    <AssemblyName>TopluProgramIndir</AssemblyName>
+    <ApplicationIcon></ApplicationIcon>
+    <UseWindowsForms>false</UseWindowsForms>
+
+    <!-- Tek dosya, bagimsiz .exe: hedef makinede runtime kurulu olmasi gerekmez. -->
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <SelfContained>true</SelfContained>
+    <PublishSingleFile>true</PublishSingleFile>
+    <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+    <EnableCompressionInSingleFile>true</EnableCompressionInSingleFile>
+    <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+    <InvariantGlobalization>false</InvariantGlobalization>
+    <DebugType>embedded</DebugType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\IndirmeMotoru\IndirmeMotoru.csproj" />
+  </ItemGroup>
+
+  <!--
+    Program listesi derleme zamaninda gomulur. Calisma aninda disaridan apps.json
+    okunmaz, aranmaz. Liste degisince proje yeniden derlenir.
+  -->
+  <ItemGroup>
+    <EmbeddedResource Include="..\..\apps.json" LogicalName="apps.json" />
+  </ItemGroup>
+
+</Project>
