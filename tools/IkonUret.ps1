@@ -1,5 +1,28 @@
 #Requires -Version 5.1
 <#
+    ===========================================================================
+    Telif Hakki (c) 2026 Alper Ibrahimagaoglu - Tum Haklari Saklidir.
+    Copyright (c) 2026 Alper Ibrahimagaoglu - All Rights Reserved.
+
+    Bu dosya tescilli (proprietary) yazilimdir. Yalnizca kisisel ve egitim
+    amacli olarak GORUNTULENEBILIR ve DEGISTIRILMEDEN calistirilabilir.
+
+    Telif sahibinin yazili izni olmadan YASAKTIR:
+      * Degistirme, uyarlama, turev eser olusturma (No Derivatives)
+      * Kopyalama, yeniden dagitma, aynalama, baska bir depoda/platformda
+        yayimlama (No Redistribution)
+      * Ticari kullanim, satis, kiralama, alt lisanslama (No Commercial Use)
+      * Bu telif basligini kaldirma veya degistirme
+
+    Tum kosullar icin depodaki LICENSE dosyasina bakiniz.
+    https://github.com/alperagaoglu61/toplu-uygulama-indir
+
+    GARANTI YOKTUR. Yazilim internetten dosya indirir; indirilen dosyalarin
+    icerigi ve guvenligi telif sahibinin sorumlulugunda degildir. Tum risk
+    kullaniciya aittir.
+    ===========================================================================
+#>
+<#
 .SYNOPSIS
     apps.json'daki ikon sluglarindan WPF ikon kaynagi uretir.
 
@@ -93,6 +116,28 @@ foreach ($slug in $sluglar) {
 
 $satirlar = New-Object Collections.Generic.List[string]
 $satirlar.Add('<!--')
+$satirlar.Add('    ===========================================================================')
+$satirlar.Add('    Telif Hakki (c) 2026 Alper Ibrahimagaoglu - Tum Haklari Saklidir.')
+$satirlar.Add('    Copyright (c) 2026 Alper Ibrahimagaoglu - All Rights Reserved.')
+$satirlar.Add('')
+$satirlar.Add('    Bu dosya tescilli (proprietary) yazilimdir. Yalnizca kisisel ve egitim')
+$satirlar.Add('    amacli olarak GORUNTULENEBILIR ve DEGISTIRILMEDEN calistirilabilir.')
+$satirlar.Add('')
+$satirlar.Add('    Telif sahibinin yazili izni olmadan YASAKTIR:')
+$satirlar.Add('      * Degistirme, uyarlama, turev eser olusturma (No Derivatives)')
+$satirlar.Add('      * Kopyalama, yeniden dagitma, aynalama, baska bir depoda/platformda')
+$satirlar.Add('        yayimlama (No Redistribution)')
+$satirlar.Add('      * Ticari kullanim, satis, kiralama, alt lisanslama (No Commercial Use)')
+$satirlar.Add('      * Bu telif basligini kaldirma veya degistirme')
+$satirlar.Add('')
+$satirlar.Add('    Tum kosullar icin depodaki LICENSE dosyasina bakiniz.')
+$satirlar.Add('    https://github.com/alperagaoglu61/toplu-uygulama-indir')
+$satirlar.Add('')
+$satirlar.Add('    GARANTI YOKTUR. Yazilim internetten dosya indirir; indirilen dosyalarin')
+$satirlar.Add('    icerigi ve guvenligi telif sahibinin sorumlulugunda degildir. Tum risk')
+$satirlar.Add('    kullaniciya aittir.')
+$satirlar.Add('    ===========================================================================')
+$satirlar.Add('')
 $satirlar.Add('    URETILMIS DOSYA - elle duzenleme, tools\IkonUret.ps1 ile yeniden uret.')
 $satirlar.Add('    Kaynak: simple-icons (CC0). Marka ikonlari kendi resmi hex rengiyle cizilir.')
 $satirlar.Add(('    Uretim: {0} - {1} ikon' -f (Get-Date -Format 'yyyy-MM-dd'), $bulunan.Count))

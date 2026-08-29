@@ -169,3 +169,39 @@ Her dosya için sırayla: boyut `Content-Length` ile eşleşiyor mu, ilk iki byt
 - `asenkronDosya` varsayılan olarak kapalıdır. Açıkken 16 parçalı indirme ölçümlerde 4–7 kat yavaşladı (9,9–16,4 MB/s karşı 63,8–71,4 MB/s): her yazmadan önceki `Position` ataması tamponlu async `FileStream`'de senkron flush/seek zorluyor ve 16 thread aynı handle üzerinde seri hale geliyor.
 - Sıkıştırma kapalıdır (`Accept-Encoding: identity`). gzip açılınca diske yazılan boyut `Content-Length` ile uyuşmaz, `Range` offsetleri ve boyut doğrulaması bozulur. Sunucu yine de sıkıştırılmış gövde dönerse tek akışa düşülüp açılır.
 - Script PowerShell ISE içinde çalışmaz; tuş yakalama desteklenmez.
+
+## Lisans ve Kullanım Koşulları
+
+**Telif Hakkı © 2026 Alper İbrahimağaoğlu — Tüm Hakları Saklıdır (All Rights Reserved).**
+
+Bu depo **açık kaynak değildir**. Kodun herkese açık olarak görüntülenebilir olması, serbestçe kullanılabileceği anlamına gelmez. Tam hukuki metin için [LICENSE](LICENSE) dosyasına bakınız.
+
+### İzin verilenler
+
+- Kaynak kodu kişisel veya eğitim amacıyla görüntülemek ve incelemek.
+- Değiştirilmemiş bir kopyayı indirip kendi cihazınızda kişisel, ticari olmayan amaçla çalıştırmak.
+
+### Yazılı izin olmadan yasaklananlar
+
+- **Değiştirme / türev eser (No Derivatives):** kodu düzenlemek, uyarlamak, çevirmek veya ondan türetilmiş bir sürüm üretmek.
+- **Yeniden dağıtım (No Redistribution):** kodu kopyalayıp başka bir depoda, web sitesinde, mağazada veya platformda yayımlamak, aynalamak (mirror), yeniden yüklemek.
+- **Ticari kullanım (No Commercial Use):** satmak, kiralamak, lisanslamak veya bir ürün/hizmetin parçası hâline getirmek.
+- Kaynak dosyalardaki telif başlıklarını veya lisans dosyasını kaldırmak ya da değiştirmek.
+- Kodu yapay zekâ modeli eğitiminde veri kümesi olarak kullanmak.
+
+### Atıf zorunluluğu
+
+Bu projeye yapılan her referans, alıntı veya bahis; **Alper İbrahimağaoğlu** adını ve bu deponun bağlantısını açıkça belirtmek zorundadır:
+
+> Toplu Program İndirici — © 2026 Alper İbrahimağaoğlu
+> https://github.com/alperagaoglu61/toplu-uygulama-indir
+
+### Üçüncü taraf yazılımlar ve markalar
+
+Bu araç hiçbir kurulum dosyasını barındırmaz veya yeniden dağıtmaz; yalnızca üreticilerin **resmî sunucularından** indirir. İndirilen her programın kendi lisans koşulları geçerlidir. `apps.json` içindeki marka adları ve `Assets/Ikonlar.xaml` içindeki ikonlar ilgili sahiplerine aittir; ikon yolları [simple-icons](https://simpleicons.org) (CC0) kaynağından üretilmiştir. Bu lisans yalnızca telif sahibinin yazdığı kodu kapsar.
+
+### Sorumluluk reddi
+
+Yazılım "olduğu gibi" sunulur, hiçbir garanti verilmez. İnternetten dosya indirir ve diske yazar; indirilen dosyaların içeriği, güvenliği veya güncelliği telif sahibinin sorumluluğunda değildir. Oluşabilecek veri kaybı, ağ maliyeti veya sistem kararsızlığından telif sahibi sorumlu tutulamaz. Tüm risk kullanıcıya aittir.
+
+Yukarıda yasaklanan kullanımlar için izin talebi: https://github.com/alperagaoglu61
